@@ -1,0 +1,24 @@
+#!/bin/bash
+shopt -s extglob
+read -n1 -p "Você deseja [c]ompactar ou [d]escompactar? (c / d) " opcao
+echo ""
+echo ""
+if [[ $opcao == +(d|D) ]]
+	then
+	echo "Nome do arquivo .tar.gz (sem a extensão): "; read arquivo
+	echo ""
+	tar -vzxf $arquivo.tar.gz
+	echo ""
+	echo "Descompactado!";
+elif [[ $opcao == +(c|C) ]]
+	then
+	echo "Informe os arquivos ou pastas para compactar, usando espaço para alternar entre os arquivos: "; read arquivos_para_compactar
+	echo ""
+	echo "Informe o nome do arquivo .tar.gz a ser gerado (sem a extensão):"; read nome_arquivo
+	tar -cf $nome_arquivo.tar $arquivos_para_compactar
+	gzip -9 $nome_arquivo.tar
+	echo "Compactado com o nome $nome_arquivo.tar.gz!"
+else
+	echo "Opção inválida!"
+fi
+echo ""

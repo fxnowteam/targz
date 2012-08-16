@@ -1,0 +1,3 @@
+Enviando este arquivo para /usr/bin você pode compactar e descompactar arquivos .tar.gz via terminal sem precisar ficar digitando todos os comandos e argumentos. Eu, por exemplo, sempre recorro ao Google para encontrar sempre os mesmos 2 links do Viva O Linux para lembrar como compacta e descompacta estes arquivos... nuuuunca lembro... 
+
+Depois de enviar para o diretório /usr/bin, basta digitar targz no seu terminal, dar enter e seguir os passos para compactar os arquivos (ou descompactar).
